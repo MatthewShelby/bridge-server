@@ -1,7 +1,6 @@
-.env
-*.env
-./.env
-./setup.txt
+/.env
+/setup.txt
 setup.txt
 *.zip
 node_modules/
+/node_modules/
