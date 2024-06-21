@@ -566,7 +566,7 @@ async function getEthereumWallet() {
 // Runs the app on the Port
 app.listen(port, async () => {
       console.log(`Example app listening on port ${port}!`);
-      paymentCheckIntervalStart()
+      //paymentCheckIntervalStart()
 });
 
 var startChecking = 0;
