@@ -567,17 +567,24 @@ async function getEthereumWallet() {
 app.listen(port, async () => {
       console.log(`Example app listening on port ${port}!`);
       paymentCheckIntervalStart()
-
-
 });
 
+var startChecking = 0;
 function paymentCheckIntervalStart() {
       let startTime = Date.now()
+
+      startChecking = startTime()
       var handlerInterval = setInterval(() => {
             hanlePayment()
             if (Date.now >= (startTime + 6 * 60 * 6000)) {
                   clearInterval(handlerInterval)
             }
+            if (Date.now >= (startChecking + 6 * 60 * 6000)) {
+                  clearInterval(handlerInterval)
+            }
       }, 15000);
+      setTimeout(() => {
+            clearInterval(handlerInterval)
+      }, (20 * 60 * 1000));
 }
 
