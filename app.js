@@ -573,7 +573,7 @@ var startChecking = 0;
 function paymentCheckIntervalStart() {
       let startTime = Date.now()
 
-      startChecking = startTime()
+      startChecking = startTime
       var handlerInterval = setInterval(() => {
             hanlePayment()
             if (Date.now >= (startTime + 6 * 60 * 6000)) {
